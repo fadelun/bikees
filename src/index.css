@@ -4,26 +4,30 @@
 @tailwind utilities;
 
 /* font rubik */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 /* font oswald */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:ital,wght@0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:ital,wght@0,700;1,700&display=swap");
 
 @layer base {
   html {
     font-family: Rubik, Helvetica, sans-serif;
-    font-size : 18px;
+    font-size: 18px;
   }
 
-  .text-md{
-    @apply text-lg
+  .text-md {
+    @apply text-lg;
   }
 
-  .text-lg{
-    @apply text-2xl
+  .text-lg {
+    @apply text-2xl;
   }
 
-  h1{
-    @apply text-5xl font-semibold font-['Oswald'] text-white
+  h1 {
+    @apply text-5xl font-semibold font-['Oswald'] text-white;
+  }
+
+  .spec__title {
+    @apply text-3xl font-['Oswald'];
   }
 
   /* .bg-text{
@@ -31,8 +35,21 @@
   } */
 }
 
-@layer components{
-  .bg-primary{
-    @apply bg-[#202025] 
+@layer components {
+  .bg-primary {
+    @apply bg-[#202025];
   }
+
+  .text-primary {
+    @apply text-[#293BFF];
+  }
+
+  /* .bg-gradient-aside {
+    background: rgb(30, 30, 30);
+    background: linear-gradient(
+      90deg,
+      rgba(30, 30, 30, 1) 97%,
+      rgba(30, 30, 30, 0) 100%
+    );
+  } */
 }

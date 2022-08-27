@@ -1,73 +1,66 @@
 [
-      {
-        "id" : 1,
-        "name" : "HEIST X2",
-        "brand" : "Polygon",
-        "price": "5000000",
-        "desc" : "By bringing Heist X, we bring you a bike that is designed best for any urban terrains and light off-road. And yes, life is getting faster and harder, and Heist X is here - with its 1x Groupset you can shift easier; the reliable hydraulic disc brakes provide you a powerful stopping in any condition and easier maintenance; and take you wherever you’re heading to faster than before with its low rolling resistance tire. As you cruise farther, Heist X is here to bring you the best riding feels ever.",
-        "spec" : {
-          
-  "Frame": "AL6 URBAN CROSS, QRx135 O.L.D.",
-  "fork" : "SUNTOUR NEX, PRELOAD ADJUSTER, STRAIGHT 1-1/8\" THREADLESS",
-  "rearShock":false,
-  "crank": "PROWHEEL ALLOY 46/34T, MAX CHAINRING: 46/34T, CRANK ARM: 170mm (S, M) / 175mm (L, XL)" ,
-  "shifter":"SHIMANO ALTUS SL-M315, 2X8 SPEED TRIGGER",
-  "pedal": "PP CAGE PEDAL W/ REFLECTOR",
-  "sadle": "ENTITY SADDLE, STEEL ø 7mm",
-  
-  "wheel": "ALLOY DOUBLE WALL",
-  "tire": "WTB RIDDLER TIRE 700X45C"
-        }
-      },
-     
-      {
-        "id" : 2,
-        "name" : "RAYZ THREE",
-        "brand" : "Polygon",
-        "price": "6100000",
-        "desc" : "A versatile mountain bike that will accompany your mobility from cycling to work on the weekdays to casual cycling on the weekends. Designed with a lightweight and strong AL6 alloy frame, and modern geometry for optimum comfort. Comes with 27.5” wheels for better traction, equipped with rear shock for better impact absorption and more sturdy seat tube tubing. Rayz becomes a fun companion for your daily cycling and every sport activity.",
-        "spec" : {
-          
-  "Frame": "AL6 ALLOY DUAL SUSPENSION FRAME",
-  "fork" : "SUNTOUR SF16-XCM-DS 27.5, TRAVEL 100",
-  "rearShock":"EXA FORM 582RL, EYE TO EYE 190, AIR",
-  "crank": "SHIMANO FC-TY301 42/34/24 X 170MM" ,
-  "shifter":"SHIMANO SLM310L",
-  "pedal": "PLASTIC FLAT PEDAL",
-  "sadle": "STANDART PERFORMANCE SADDLE",
-  
-  "wheel": "DOUBLE WALL RIMS WITH STEEL HUBS",
-  "tire": "DELI TIRE-258 27.5\"X2.1"
-        },
-        "other" : {
-          "wheelSize" : 27.5,
-          "bikeWeight" : "15.9 Kg"
-        }
-      },
-      {
-        "id" : 3,
-        "name" : "CLASH 7.0",
-        "brand" : "Pacific",
-        "price": "6950000 ",
-        "desc" : "Pacific kembali meluncurkan sepeda jenis minivelo terbarunya, yaitu Pacific Clash 7.0. Sepeda ini dibekali dengan rangka alloy yang sudah menggunakan sistem internal cable routing (jalur kabel masuk ke dalam rangka). Untuk menunjang kemudahan pengendara, sepeda ini difasilitasi 10 x 2 pilihan kecepatan dari Shimano tipe Tiagra, untuk mengahadapi berbagai macam kondisi jalan. Dengan menggunakan rem cakram mekanik yang pakem untuk menambahkan keamanan saat berkendara. Dengan ukuran ban 20 inci sepeda ini cocok untuk kalangan remaja dan dewasa. Selain itu, sepeda minivelo ini cukup ringkas dan praktis pada saat di simpan. Sepeda ini kami rekomendasikan untuk anda yang sedang mencari sepeda untuk berkeliling di tengah kota. ",
-        "spec" : {
-          
-  "frame": "Alloy 6061 Post Mount Frame",
-  "fork" : "Alloy 6061 Post Mount Fork",
-  "rearShock":false,
-  "crank": "SYTE Alloy 39/53T, Hollow" ,
-  "shifter":"Shimano Tiagra 4700 2×10 Speed",
-  "pedal": "Syte QR",
-  "sadle": "Syte, Lebar 150mm",
-  
-  "wheel": "Double Wall",
-  "tire": "Kenda 20 x 1 3/8"
-        },
-        "other" : {
-          "bikeWeight" : "12.32kg"
-        }
-      }
-      
-      ]
-    
-  
+  {
+    "id": 1,
+    "name": "HEIST X2",
+    "brand": "Polygon",
+    "price": "5000000",
+    "desc": "By bringing Heist X, we bring you a bike that is designed best for any urban terrains and light off-road. And yes, life is getting faster and harder, and Heist X is here - with its 1x Groupset you can shift easier; the reliable hydraulic disc brakes provide you a powerful stopping in any condition and easier maintenance; and take you wherever you’re heading to faster than before with its low rolling resistance tire. As you cruise farther, Heist X is here to bring you the best riding feels ever.",
+    "image": "./images/bikes/Heist-X2.png",
+    "spec": {
+      "frame": "AL6 URBAN CROSS, QRx135 O.L.D.",
+      "fork": "SUNTOUR NEX, PRELOAD ADJUSTER, STRAIGHT 1-1/8\" THREADLESS",
+      "rearShock": false,
+      "crank": "PROWHEEL ALLOY 46/34T, MAX CHAINRING: 46/34T, CRANK ARM: 170mm (S, M) / 175mm (L, XL)",
+      "shifter": "SHIMANO ALTUS SL-M315, 2X8 SPEED TRIGGER",
+      "pedal": "PP CAGE PEDAL W/ REFLECTOR",
+      "sadle": "ENTITY SADDLE, STEEL ø 7mm",
+      "wheel": "ALLOY DOUBLE WALL",
+      "tire": "WTB RIDDLER TIRE 700X45C"
+    }
+  },
+  {
+    "id": 2,
+    "name": "RAYZ THREE",
+    "brand": "Polygon",
+    "price": "6100000",
+    "desc": "A versatile mountain bike that will accompany your mobility from cycling to work on the weekdays to casual cycling on the weekends. Designed with a lightweight and strong AL6 alloy frame, and modern geometry for optimum comfort. Comes with 27.5” wheels for better traction, equipped with rear shock for better impact absorption and more sturdy seat tube tubing. Rayz becomes a fun companion for your daily cycling and every sport activity.",
+    "image": "./images/bikes/Rayz-Three.png",
+    "spec": {
+      "frame": "AL6 ALLOY DUAL SUSPENSION FRAME",
+      "fork": "SUNTOUR SF16-XCM-DS 27.5, TRAVEL 100",
+      "rearShock": "EXA FORM 582RL, EYE TO EYE 190, AIR",
+      "crank": "SHIMANO FC-TY301 42/34/24 X 170MM",
+      "shifter": "SHIMANO SLM310L",
+      "pedal": "PLASTIC FLAT PEDAL",
+      "sadle": "STANDART PERFORMANCE SADDLE",
+      "wheel": "DOUBLE WALL RIMS WITH STEEL HUBS",
+      "tire": "DELI TIRE-258 27.5\"X2.1"
+    },
+    "other": {
+      "wheelSize": 27.5,
+      "bikeWeight": "15.9 Kg"
+    }
+  },
+  {
+    "id": 3,
+    "name": "CLASH 7.0",
+    "brand": "Pacific",
+    "price": "6950000 ",
+    "desc": "Pacific kembali meluncurkan sepeda jenis minivelo terbarunya, yaitu Pacific Clash 7.0. Sepeda ini dibekali dengan rangka alloy yang sudah menggunakan sistem internal cable routing (jalur kabel masuk ke dalam rangka). Untuk menunjang kemudahan pengendara, sepeda ini difasilitasi 10 x 2 pilihan kecepatan dari Shimano tipe Tiagra, untuk mengahadapi berbagai macam kondisi jalan. Dengan menggunakan rem cakram mekanik yang pakem untuk menambahkan keamanan saat berkendara. Dengan ukuran ban 20 inci sepeda ini cocok untuk kalangan remaja dan dewasa. Selain itu, sepeda minivelo ini cukup ringkas dan praktis pada saat di simpan. Sepeda ini kami rekomendasikan untuk anda yang sedang mencari sepeda untuk berkeliling di tengah kota. ",
+    "image": "./images/bikes/CLASH-7.png",
+    "spec": {
+      "frame": "Alloy 6061 Post Mount Frame",
+      "fork": "Alloy 6061 Post Mount Fork",
+      "rearShock": false,
+      "crank": "SYTE Alloy 39/53T, Hollow",
+      "shifter": "Shimano Tiagra 4700 2×10 Speed",
+      "pedal": "Syte QR",
+      "sadle": "Syte, Lebar 150mm",
+      "wheel": "Double Wall",
+      "tire": "Kenda 20 x 1 3/8"
+    },
+    "other": {
+      "bikeWeight": "12.32kg"
+    }
+  }
+]
