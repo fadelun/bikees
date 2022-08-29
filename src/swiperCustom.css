@@ -1,0 +1,21 @@
+.swiper .swiper-button-prev:after,
+.swiper .swiper-button-next:after {
+  content: "" !important;
+}
+.swiper .swiper-button-prev {
+  background: url("./image/to-left.svg") !important;
+  background-size: cover !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 46);
+  /* height: 50px !important; */
+}
+.swiper .swiper-button-next {
+  background: url("./image/to-right.svg") !important;
+  background-size: cover !important;
+  width: calc(var(--swiper-navigation-size) / 44 * 46);
+  /* height: 50px !important; */
+}
+
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+  filter: drop-shadow(1px 1px 1px white) !important;
+}

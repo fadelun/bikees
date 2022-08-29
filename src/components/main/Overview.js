@@ -1,51 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bikes from "../../source/bikes";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
 
 // import required modules
-import { Navigation } from "swiper";
-// import { ReactComponent as ToRight } from "../image/to-right.svg";
-// import { ReactComponent as ToLeft } from "../image/to-left.svg";
-// import { ReactComponent as ToBottom } from "../image/to-bottom.svg";
+import { Navigation, Thumbs } from "swiper";
 
-function Overview() {
+
+
+function Overview({ setDetail, detail }) {
+
+
+
+    // const [showCase, setShowCase] = useState()
+    // const show = (e) => {
+    //     setShowCase(e)
+
+    //     console.log(showCase)
+    // }
+
+
     return (
-        // <>
-        //     {bikes && bikes.map(bike => {
-        //         console.log(bike)
-        //     })}
-        // </>
-        <div className="overview__bike container content mx-auto h-screen pt-20 ">
-            <Swiper navigation={true} modules={[Navigation]} className="">
+        <div>
+            <Swiper navigation={true} t modules={[Navigation, Thumbs]} className="">
                 {bikes && bikes.map((bike, i) => {
 
-                    return <SwiperSlide key={i}>
-                        <div className={`bike-${i}`}>
-                            <p className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute left-[12%] top-[22%]">
-                                {bike.brand}
-                            </p>
+                    return (
+                        <SwiperSlide key={i} >
+                            {({ isActive }) =>
+                                <div className={`bike-${i} overview__bike container content mx-auto h-screen pt-20 `} >
+                                    {
+                                        (isActive) ? setDetail(bike) : ''
+                                    }
 
-                            <div className="content relative">
-                                <h1 className="uppercase ">{bike.name}</h1>
-                                <div className="image-container w-2/4 mx-auto">
-                                    <img src={bike.image} alt={bike.name} />
-                                    <div className="button__show__spec hover:cursor-pointer border border-blue-400 mx-auto absolute top-[3%] bottom-[20%] left-[30%] right-[30%] opacity-0 hover:opacity-30"></div>
+                                    <div className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute inset-0 flex justify-center items-center">
+                                        <p>
+                                            {bike.brand}
+                                        </p>
+                                    </div>
+
+                                    <div className="content relative">
+                                        <h1 className="uppercase ">{bike.name}</h1>
+
+
+                                        <div className="image-container w-2/4 mx-auto">
+                                            <img src={bike.image} alt={bike.name} />
+
+                                            <div className="button__show__spec hover:cursor-pointer border border-blue-400 mx-auto absolute top-[3%] bottom-[20%] left-[30%] right-[30%] opacity-0 hover:opacity-30"></div>
+                                        </div>
+
+                                        {/* cooming soon */}
+                                        {/* <ul>
+                                <li className="w-20 h-14 bg-white absolute left-20 top-0"></li>
+                                <li className="w-20 h-14 bg-white absolute right-20 top-0"></li>
+                                <li className="w-20 h-14 bg-white absolute left-20 bottom-0"></li>
+                                <li className="w-20 h-14 bg-white absolute right-20 bottom-0"></li>
+                            </ul> */}
+
+                                    </div>
+
+
+
                                 </div>
-                            </div>
+                            }
+                        </SwiperSlide>
 
-
-
-                        </div>
-                    </SwiperSlide>
+                    )
 
 
                 })}
             </Swiper>
+
+
         </div>
+
+
 
     )
 }
