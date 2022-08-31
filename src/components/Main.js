@@ -11,13 +11,19 @@ import Details from "./main/Details";
 
 
 export default function Main() {
-  const [specContainer, setSpecContainer] = useState(true)
+  const [specContainer, setSpecContainer] = useState(false)
   const [detail, setDetail] = useState()
+  const [modal, setModal] = useState()
 
 
 
   const showMore = () => {
     setSpecContainer(!specContainer)
+
+  }
+
+  const handleModal = () => {
+    setModal(!modal)
   }
 
 
@@ -25,23 +31,14 @@ export default function Main() {
   return (
     <main className="relative h-screen">
       {
-        detail &&
-        <div className="zoom__in fixed z-50 inset-0 py-10  bg-[#000000e0]">
-          <button onClick={() => showMore()} className="btn absolute top-1 right-1 hover:cursor-pointer ">
+        modal && detail &&
+        <div className="zoom__in fixed z-50 inset-0 py-10  bg-primary">
+          <button onClick={handleModal} className="btn absolute top-1 right-1 hover:cursor-pointer ">
             <Close />
           </button>
 
-          <div className="image__container mx-auto w-2/5 border ">
+          <div className="image__container mx-auto w-3/6 ">
             <img src={detail.image} alt={detail.name} className="mb-6" />
-
-            <ul className="image__list flex justify-center basis-4 border  mx-auto">
-              <li className="mr-2 w-1/4">
-                <img src={detail.image} alt="Razy Three" />
-              </li>
-              <li className="mr-2 w-1/4">
-                <img src={detail.image} alt="Razy Three" />
-              </li>
-            </ul>
           </div>
 
 
@@ -63,10 +60,10 @@ export default function Main() {
       <Overview setDetail={setDetail} detail={detail} />
 
       {/* detail bike */}
-      {specContainer &&
-        detail &&
-        <Details detail={detail} showMore={showMore} />
-      }
+
+
+      <Details detail={detail} showMore={showMore} handleModal={handleModal} specContainer={specContainer} />
+
 
 
     </main>
