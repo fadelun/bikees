@@ -24,7 +24,7 @@ function Overview({ setDetail, detail }) {
                     return (
                         <SwiperSlide key={i} >
                             {({ isActive }) =>
-                                <div className={`bike-${i} overview__bike container content mx-auto h-screen pt-20 `} >
+                                <div className={`bike-${i} overview__bike container content mx-auto h-screen pt-20 flex items-center md:block`} >
                                     {
                                         (isActive) ? setDetail(bike) : ''
                                     }
@@ -35,11 +35,11 @@ function Overview({ setDetail, detail }) {
                                         </p>
                                     </div> */}
 
-                                    <div className="content relative">
-                                        <h1 className="uppercase ">{bike.name}</h1>
+                                    <div className="content relative ">
+                                        <h1 className="uppercase text-center md:text-left">{bike.name}</h1>
 
 
-                                        <div className="image-container w-2/4 mx-auto">
+                                        <div className="image-container w-auto md:w-2/4 mx-auto">
                                             <img src={bike.image[0]} alt={bike.name} />
 
                                             {/* {comming soon} */}

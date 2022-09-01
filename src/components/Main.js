@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-
-import { motion } from "framer-motion"
+import React, { useState, useEffect } from "react";
 
 import { ReactComponent as ToBottom } from "../image/to-bottom.svg";
 
-import { ReactComponent as Close } from "../image/close.svg";
+
 import Overview from "./main/Overview";
 import Details from "./main/Details";
 
@@ -13,38 +11,25 @@ import Details from "./main/Details";
 export default function Main() {
   const [specContainer, setSpecContainer] = useState(false)
   const [detail, setDetail] = useState()
-  const [modal, setModal] = useState()
+  const [showImg, setShowImg] = useState();
 
 
+  useEffect(() => {
+    console.log("showImg", showImg)
+    console.log("specContainer", specContainer)
+  }, [specContainer, showImg])
 
   const showMore = () => {
     setSpecContainer(!specContainer)
-
+    if (!specContainer) setShowImg()
   }
 
-  const handleModal = () => {
-    setModal(!modal)
-  }
 
 
 
   return (
     <main className="relative h-screen">
-      {
-        modal && detail &&
-        <div className="zoom__in fixed z-50 inset-0 py-10  bg-primary">
-          <button onClick={handleModal} className="btn absolute top-1 right-1 hover:cursor-pointer ">
-            <Close />
-          </button>
 
-          <div className="image__container mx-auto w-3/6 ">
-            <img src={detail.image} alt={detail.name} className="mb-6" />
-          </div>
-
-
-
-        </div>
-      }
       <div className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute inset-0 flex justify-center items-center">
         <p>
           {detail && detail.brand}
@@ -62,7 +47,7 @@ export default function Main() {
       {/* detail bike */}
 
 
-      <Details detail={detail} showMore={showMore} handleModal={handleModal} specContainer={specContainer} />
+      <Details detail={detail} showMore={showMore} showImg={showImg} setShowImg={setShowImg} specContainer={specContainer} />
 
 
 
