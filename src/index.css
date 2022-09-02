@@ -23,11 +23,11 @@
   }
 
   h1 {
-    @apply text-5xl font-semibold font-['Oswald'] text-white;
+    @apply text-3xl md:text-5xl font-semibold font-['Oswald'] text-white;
   }
 
   .spec__title {
-    @apply text-3xl font-['Oswald'];
+    @apply text-2xl md:text-3xl font-['Oswald'];
   }
 
   /* .bg-text{

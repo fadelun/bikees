@@ -9,7 +9,7 @@ import "swiper/css/thumbs";
 
 
 // import required modules
-import { Navigation, Thumbs } from "swiper";
+import { Navigation, Thumbs, Keyboard } from "swiper";
 
 
 
@@ -18,7 +18,7 @@ function Overview({ setDetail, detail }) {
 
     return (
         <div>
-            <Swiper navigation={true} t modules={[Navigation, Thumbs]} className="">
+            <Swiper navigation={true} keyboard={true} modules={[Navigation, Thumbs, Keyboard]} className="">
                 {bikes && bikes.map((bike, i) => {
 
                     return (

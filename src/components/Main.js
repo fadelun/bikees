@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { ReactComponent as ToBottom } from "../image/to-bottom.svg";
 
 
@@ -9,19 +8,23 @@ import Details from "./main/Details";
 
 
 export default function Main() {
+  // specContainer => menampilkan page spec, detail => wadah untuk mengisi data sepeda
+  // showImg => menampilkan gambar besar di page spec
+
   const [specContainer, setSpecContainer] = useState(false)
   const [detail, setDetail] = useState()
   const [showImg, setShowImg] = useState();
 
 
+
+
   useEffect(() => {
-    console.log("showImg", showImg)
-    console.log("specContainer", specContainer)
+    if (!specContainer) setShowImg()
   }, [specContainer, showImg])
 
   const showMore = () => {
     setSpecContainer(!specContainer)
-    if (!specContainer) setShowImg()
+
   }
 
 
@@ -30,7 +33,7 @@ export default function Main() {
   return (
     <main className="relative h-screen">
 
-      <div className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute inset-0 flex justify-center items-center">
+      <div className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute inset-0 hidden sm:flex justify-center items-center">
         <p>
           {detail && detail.brand}
 
