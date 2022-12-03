@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import bikes from "../../source/bikes";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +8,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-
 // import required modules
 import { Navigation, Thumbs, Keyboard } from "swiper";
 
@@ -15,25 +15,19 @@ import { Navigation, Thumbs, Keyboard } from "swiper";
 
 function Overview({ setDetail, detail }) {
 
-
     return (
         <div>
-            <Swiper navigation={true} keyboard={true} modules={[Navigation, Thumbs, Keyboard]} className="">
+            <Swiper navigation={true} keyboard={true} spaceBetween={50} modules={[Navigation, Thumbs, Keyboard]} className="">
                 {bikes && bikes.map((bike, i) => {
 
                     return (
-                        <SwiperSlide key={i} >
+                        <SwiperSlide key={i + 1} >
                             {({ isActive }) =>
                                 <div className={`bike-${i} overview__bike container content mx-auto h-screen pt-20 flex items-center md:block`} >
                                     {
                                         (isActive) ? setDetail(bike) : ''
                                     }
 
-                                    {/* <div className="bg-text text-[#ffffff0d] text-[20vw] font-bold tracking-tighter italic absolute inset-0 flex justify-center items-center">
-                                        <p>
-                                            {bike.brand}
-                                        </p>
-                                    </div> */}
 
                                     <div className="content relative ">
                                         <h1 className="uppercase text-center md:text-left">{bike.name}</h1>

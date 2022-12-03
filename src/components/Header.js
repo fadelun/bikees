@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import ImageLogo from '../image/logo.png';
 import { ReactComponent as Hamburger } from "../image/hamburger.svg";
 import { useEffect, useState } from 'react';
@@ -39,10 +40,34 @@ const Header = () => {
                 <img src={ImageLogo} alt="logo" />
             </div>
 
-            <nav className={`${(!showNav) ? "hidden" : "flex flex-col items-center absolute inset-0 bg-[#181818] z-[1000]"}  md:flex md:justify-between w-auto md:w-1/2 text-white list-none `}>
-                {showNav && <p onClick={handleNavbar} className="absolute top-1 right-1">X</p>}
-                <li className={showNav && "basis-28 "}><a href='' >Overview</a></li>
-                <li className={showNav && "basis-28 "}><a href='' >Collection</a></li>
+            <nav className={`${(!showNav) ? "hidden" : "flex flex-col pt-16 items-center absolute inset-0 bg-[#181818] z-[1000]"}  md:flex md:justify-between w-auto md:w-1/2 text-white list-none `}>
+                {showNav && <p onClick={handleNavbar} className="absolute top-1 right-1 hover:cursor-pointer">X</p>}
+
+                <li className={showNav && "basis-28 "}>
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "text-primary" : " "
+
+                        }
+                    >
+                        Overview
+                    </NavLink>
+
+                </li>
+                <li className={showNav && "basis-28 "}>
+                    <NavLink
+                        to="/collection"
+                        className={({ isActive }) =>
+                            isActive ? "text-primary" : " "
+
+                        }
+                    >
+                        Collection
+                    </NavLink>
+
+
+                </li>
                 <li className={showNav && "basis-28 "}><a href='' >About</a></li>
                 <li className={showNav && "basis-28 "}><a href='' >Contact</a></li>
 

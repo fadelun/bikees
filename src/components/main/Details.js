@@ -5,15 +5,14 @@ import FormatNumber from "../../utils/FormatNumber";
 
 
 
-function Details({ detail, showMore, specContainer, showImg, setShowImg }) {
+function Details({ detail, showMore, specContainer, setSpecContainer, showImg, setShowImg }) {
 
     const [modal, setModal] = useState()
 
 
-
-
     const handleThumbs = (item) => {
         setShowImg(item)
+
     }
 
     const handleModal = () => {
@@ -53,7 +52,7 @@ function Details({ detail, showMore, specContainer, showImg, setShowImg }) {
                         transition={{
                             type: "spring",
                             bounce: 0.3,
-                            duration: 0.6
+                            duration: 1
                         }}
                         className="spec__bike content text-white p-8 md:p-0 absolute bg-[#181818]  right-0 left-0 top-0 pt-16 z-20 " >
                         <button onClick={() => showMore()} className="btn absolute top-1 right-1 hover:cursor-pointer ">
@@ -61,7 +60,7 @@ function Details({ detail, showMore, specContainer, showImg, setShowImg }) {
                         </button>
 
 
-                        <div className="container mx-auto ">
+                        <div className="container mx-auto pt-10">
                             <header className=" flex flex-col md:flex-row  justify-between mb-20 md:mb-8">
 
 
@@ -78,20 +77,7 @@ function Details({ detail, showMore, specContainer, showImg, setShowImg }) {
                                         }
 
                                     </ul>
-                                    {/* <ul className="image__list flex justify-center w-full gap-x-2">
-                                    <li className="w-1/4 border border-transparent hover:cursor-pointer  hover:border-[#293BFF]">
-                                        <img src={detail.image} alt="Razy Three" />
-                                    </li>
-                                    <li className="w-1/4 border border-transparent hover:cursor-pointer  hover:border-[#293BFF]">
-                                        <img src={detail.image} alt="Razy Three " />
-                                    </li>
-                                    <li className="w-1/4 border border-transparent hover:cursor-pointer  hover:border-[#293BFF]">
-                                        <img src={detail.image} alt="Razy Three" />
-                                    </li>
-                                    <li className="w-1/4 border border-transparent hover:cursor-pointer  hover:border-[#293BFF]">
-                                        <img src={detail.image} alt="Razy Three " />
-                                    </li>
-                                </ul> */}
+
                                 </div>
                                 <div className="content md:w-3/6 ">
                                     <div className="head__of__bike border-b pb-3 mb-5">

@@ -50,7 +50,7 @@ export default function Main() {
       {/* detail bike */}
 
 
-      <Details detail={detail} showMore={showMore} showImg={showImg} setShowImg={setShowImg} specContainer={specContainer} />
+      <Details detail={detail} showMore={showMore} showImg={showImg} setShowImg={setShowImg} specContainer={specContainer} setSpecContainer={setSpecContainer} />
 
 
 
